@@ -3,12 +3,12 @@ export interface ReporteEventoInterface{
     FechaDeInicio: string;
     FechaDeFin: string;
     FueRealizado: boolean;
-    MotivoDeNoRealizacion: string;
-    EncuestaEvento: string;
-    ResultadosEncuesta: string;
-    NumeroDeRegistrados: string;
+    MotivoDeNoRealizacion: string | null;
+    EncuestaEvento: string | null;
+    ResultadosEncuesta: string | null;
+    NumeroDeRegistrados: string | null;
     OrganoInstitucional: string;
-    Escuela: string;
-    Programa: string;
+    Escuela: string | null;
+    Programa: string | null;
     CreadoPor: string;
 }

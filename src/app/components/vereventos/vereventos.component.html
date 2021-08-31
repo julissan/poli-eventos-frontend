@@ -1,5 +1,30 @@
 <app-header></app-header>
 
-<p>ver eventos works!</p>
+<h3>Lista de Eventos</h3><br>
 
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha de Inicio</th>
+        <th scope="col">Fecha de Fin</th>
+        <th scope="col">Encuesta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let evento of eventos" (click)="inscripcionEvento(evento.idEvento)">
+        <th scope="row">{{ evento.idEvento }}</th>
+        <td>{{ evento.nombreEvento }}</td>
+        <td>{{ evento.fechaInicio }}</td>
+        <td>{{ evento.fechaFin }}</td>
+        <td>{{ evento.encuestaEvento }}</td>
+      </tr>
+      
+    </tbody>
+    <br>
+    <button type="volver" (click)="volver()" class="btn btn-primary">Volver</button>
+
+  </table>
+  
 <app-footer></app-footer>

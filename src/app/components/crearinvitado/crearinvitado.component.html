@@ -1,1 +1,30 @@
-<p>crearinvitado works!</p>
+<app-header></app-header>
+
+<div class="container">
+
+    <form [formGroup]="crearForm" (ngSubmit)="postForm(crearForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre del Invitado" formControlName="nombreInvitado">
+        </div>
+
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1">Correo</label>
+                <input type="text" class="form-control" placeholder="Correo del Invitado" formControlName="correoInvitado">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Credenciales</label>
+                <input type="text" class="form-control" placeholder="Credenciales del Invitado" formControlName="credencialesInvitado">
+            </div>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Crear Invitado</button>
+        <button type="volver" class="btn btn-dark" (click)="volver()" style="margin-left: 2%;">Volver</button>
+
+    </form>
+
+</div>
+
+<app-footer></app-footer>

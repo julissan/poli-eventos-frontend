@@ -72,7 +72,7 @@ button{
     justify-content: space-evenly;
     width: 50%;
     min-height: 100%;
-    padding: 20px;
+    padding: 15px;
 }
 
 
@@ -84,33 +84,6 @@ div{
     width: 100%;
     min-height: 100%;
     padding: 20px;
-}
-
-  
-@-webkit-keyframes fadeInDown {
-   0% {
-     opacity: 0;
-     -webkit-transform: translate3d(0, -100%, 0);
-     transform: translate3d(0, -100%, 0);
-   }
-   100% {
-     opacity: 1;
-     -webkit-transform: none;
-     transform: none;
-   }
-}
-  
-@keyframes fadeInDown {
-   0% {
-     opacity: 0;
-     -webkit-transform: translate3d(0, -100%, 0);
-     transform: translate3d(0, -100%, 0);
-   }
-   100% {
-     opacity: 1;
-     -webkit-transform: none;
-     transform: none;
-   }
 }
 
 .underlineHover:after {

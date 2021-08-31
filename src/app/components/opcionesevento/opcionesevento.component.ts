@@ -20,15 +20,19 @@ export class OpcioneseventoComponent implements OnInit {
   }
 
   onClick2(){
-    this.router.navigate(['opciones-invitado/', this.activerouter.snapshot.paramMap.get('id')]);
+    this.router.navigate(['invitadoevento', this.activerouter.snapshot.paramMap.get('id')]);
   }
 
   onClick3(){
-    this.router.navigate(['opciones-ubicacion/', this.activerouter.snapshot.paramMap.get('id')]);
+    this.router.navigate(['ubicacionevento', this.activerouter.snapshot.paramMap.get('id')]);
   }
 
   onClick4(){
-    this.router.navigate(['opciones-registro/', this.activerouter.snapshot.paramMap.get('id')]);
+    this.router.navigate(['opciones-registro', this.activerouter.snapshot.paramMap.get('id')]);
+  }
+
+  volver(){
+    this.router.navigate(['ver-eventos-org/']);
   }
 
 }

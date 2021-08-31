@@ -1,1 +1,26 @@
-<p>agregarubicacion works!</p>
+<app-header></app-header>
+
+<h3>Ubicaciones</h3><br>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Dirección</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ubicacion of ubicaciones" (click)="agregarUbicacion(ubicacion.idUbicacion)">
+        <th scope="row">{{ ubicacion.idUbicacion }}</th>
+        <td>{{ ubicacion.nombreUbicacion }}</td>
+        <td>{{ ubicacion.direccion }}</td>
+      </tr>
+      
+    </tbody>
+    <br>
+    <button type="volver" (click)="volver()" class="btn btn-primary">Volver</button>
+
+  </table>
+  
+<app-footer></app-footer>

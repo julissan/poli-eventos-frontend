@@ -1,1 +1,25 @@
-<p>editarubicacion works!</p>
+<app-header></app-header>
+
+<div class="container">
+
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre de la Ubicación" formControlName="nombreUbicacion">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Dirección</label>
+            <input type="text" class="form-control" placeholder="Dirección" formControlName="direccion">
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <button type="button" class="btn btn-danger" (click)="eliminar()" style="margin-left: 2%;">Eliminar Ubicacion</button>
+        <button type="volver" class="btn btn-dark" (click)="volver()" style="margin-left: 2%;">Volver</button>
+
+    </form>
+
+</div>
+
+<app-footer></app-footer>

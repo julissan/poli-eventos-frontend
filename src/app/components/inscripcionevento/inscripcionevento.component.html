@@ -1,5 +1,29 @@
 <app-header></app-header>
 
-<p>inscripcionevento works!</p>
+<div class="container">
+
+    <form [formGroup]="crearForm" (ngSubmit)="postForm(crearForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre Completo</label>
+            <input type="text" class="form-control" placeholder="Nombre Completo" formControlName="nombreInteresado">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Código</label>
+            <input type="text" class="form-control" placeholder="Código" formControlName="codigoInteresado">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Correo</label>
+            <input type="text" class="form-control" placeholder="Correo" formControlName="correoInteresado">
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Crear Registro</button>
+        <button type="volver" class="btn btn-dark" (click)="volver()" style="margin-left: 2%;">Volver</button>
+
+    </form>
+
+</div>
 
 <app-footer></app-footer>

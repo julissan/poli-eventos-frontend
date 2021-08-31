@@ -1,5 +1,29 @@
 <app-header></app-header>
 
+<div class="container">
 
+    <form [formGroup]="crearForm" (ngSubmit)="postForm(crearForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">URL Imagen</label>
+            <input type="text" class="form-control" placeholder="URL Imagen" formControlName="imagenRegistro">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Página Relacionada</label>
+            <input type="text" class="form-control" placeholder="Página Relacionada" formControlName="urlRegistro">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Observaciones</label>
+            <input type="text" class="form-control" placeholder="Observaciones" formControlName="observacionRegistro">
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Crear Registro</button>
+        <button type="volver" class="btn btn-dark" (click)="volver()" style="margin-left: 2%;">Volver</button>
+
+    </form>
+
+</div>
 
 <app-footer></app-footer>

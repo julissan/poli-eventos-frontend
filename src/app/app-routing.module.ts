@@ -34,6 +34,9 @@ import { VerubicacionesComponent } from './components/verubicaciones/verubicacio
 import { VerubicacionesporeventoComponent } from './components/verubicacionesporevento/verubicacionesporevento.component';
 import { EditarubicacionComponent } from './components/editarubicacion/editarubicacion.component';
 
+import { InvitadoeventoComponent } from './components/invitadoevento/invitadoevento.component';
+import { UbicacioneventoComponent } from './components/ubicacionevento/ubicacionevento.component';
+import { InteresadoeventoComponent } from './components/interesadoevento/interesadoevento.component';
 
 import { ReporteeventoComponent } from './components/reporteevento/reporteevento.component';
 
@@ -46,7 +49,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
 
   {path:'ver-eventos', component:VereventosComponent}, //invitado
-  {path:'inscripcion-evento', component:InscripcioneventoComponent}, //invitado
+  {path:'inscripcion-evento/:id', component:InscripcioneventoComponent}, //invitado
 
   {path:'rol', component:SeleccionarrolComponent}, //post login si tiene ambos roles
   {path:'home-organizador', component:HomeorganizadorComponent}, //home organizador
@@ -62,21 +65,26 @@ const routes: Routes = [
   {path:'editar-registro/:id', component:EditarregistroComponent}, //editar/borrar registro organizador
 
   {path:'crear-invitado', component:CrearinvitadoComponent}, //crear invitado organizador
-  {path:'opciones-invitado/:id', component:OpcionesinvitadoComponent}, //opciones invitado organizador
+  {path:'opciones-invitado', component:OpcionesinvitadoComponent}, //opciones invitado organizador
   {path:'agregar-invitado/:id', component:AgregarinvitadoComponent}, //agregar invitado organizador
-  {path:'ver-invitados/', component:VerinvitadosComponent}, //ver invitados
+  {path:'ver-invitados', component:VerinvitadosComponent}, //ver invitados
   {path:'ver-invitados-evento/:id', component:VerinvitadosporeventoComponent}, //ver invitados por evento organizador
   {path:'editar-invitado/:id', component:EditarinvitadoComponent}, //editar/borrar invitado organizador
 
   {path:'crear-ubicacion', component:CrearubicacionComponent}, //crear ubicacion organizador
-  {path:'opciones-ubicacion/:id', component:OpcionesubicacionComponent}, //opciones ubicacion organizador
+  {path:'opciones-ubicacion', component:OpcionesubicacionComponent}, //opciones ubicacion organizador
   {path:'agregar-ubicacion/:id', component:AgregarubicacionComponent}, //agregar ubicacion organizador
-  {path:'ver-ubicaciones/', component:VerubicacionesComponent}, //ver ubicaciones
+  {path:'ver-ubicaciones', component:VerubicacionesComponent}, //ver ubicaciones
   {path:'ver-ubicaciones-evento/:id', component:VerubicacionesporeventoComponent}, //ver ubicaciones por evento organizador
   {path:'editar-ubicacion/:id', component:EditarubicacionComponent}, //editar/borrar ubicacion organizador
 
   {path:'reporte-evento/:id', component:ReporteeventoComponent}, //generar reporte organizador
-  {path:'home-directivo', component:HomedirectivoComponent} //home directivo
+  {path:'home-directivo', component:HomedirectivoComponent}, //home directivo
+
+  {path:'invitadoevento/:id', component:InvitadoeventoComponent}, //asociar un invitado a un evento
+  {path:'ubicacionevento/:id', component:UbicacioneventoComponent}, //asociar una ubicación a un evento
+  {path:'interesadoevento/:id', component:InteresadoeventoComponent} //asociar un interesado a un evento(inscripción)
+
 ];
 
 @NgModule({
@@ -118,7 +126,10 @@ export const routingComponents = [
   VerubicacionesporeventoComponent,
   EditarubicacionComponent,
 
+  InvitadoeventoComponent,
+  UbicacioneventoComponent,
+  InteresadoeventoComponent,
+
   ReporteeventoComponent,
   HomedirectivoComponent
-  
 ]

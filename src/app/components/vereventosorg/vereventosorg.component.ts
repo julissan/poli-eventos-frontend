@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api/api.service';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 import { EventoInterface } from '../../models/evento.interface';
 
 @Component({
@@ -24,6 +24,10 @@ export class VereventosorgComponent implements OnInit {
   opcionesEvento(id:string){
     console.log(id);
     this.router.navigate(['opciones-evento', id]);
+  }
+
+  volver(){
+    this.router.navigate(['home-organizador']);
   }
 
 

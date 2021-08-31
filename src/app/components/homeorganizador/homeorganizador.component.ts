@@ -21,5 +21,17 @@ export class HomeorganizadorComponent implements OnInit {
     this.router.navigate(['ver-eventos-org']);
   }
 
+  onClick3(){
+    this.router.navigate(['opciones-invitado/']);
+  }
+
+  onClick4(){
+    this.router.navigate(['opciones-ubicacion/']);
+  }
+
+  volver(){
+    this.router.navigate(['rol']);
+  }
+
 
 }

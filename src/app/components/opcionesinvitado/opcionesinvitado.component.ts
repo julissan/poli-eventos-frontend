@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-opcionesinvitado',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OpcionesinvitadoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private activerouter:ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+
+  onClick1(){
+    this.router.navigate(['crear-invitado']);
+  }
+
+  onClick2(){
+    this.router.navigate(['ver-invitados']);
+  }
+
+  volver(){
+    this.router.navigate(['home-organizador']);
   }
 
 }

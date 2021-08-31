@@ -5,9 +5,9 @@ export interface EventoInterface{
     fechaFin: string;
     year: string;
     fueRealizado: boolean;
-    motivoDeNoRealizacion: string;
-    encuestaEvento: string;
-    resultadosEncuesta: string;
+    motivoDeNoRealizacion: string | null;
+    encuestaEvento: string | null;
+    resultadosEncuesta: string | null;
     idPrograma: string | null;
     idEscuela: string | null;
     idOrganoInstitucional: string;

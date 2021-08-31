@@ -20,4 +20,5 @@ export class SeleccionarrolComponent implements OnInit {
   onClick2(){
     this.router.navigate(['home-directivo']);
   }
+
 }

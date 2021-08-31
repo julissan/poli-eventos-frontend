@@ -1,1 +1,28 @@
-<p>agregarinvitado works!</p>
+<app-header></app-header>
+
+<h3>Invitados Registrados</h3><br>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Credenciales</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let invitado of invitados" (click)="agregarInvitado(invitado.idInvitado)">
+        <th scope="row">{{ invitado.idInvitado }}</th>
+        <td>{{ invitado.nombreInvitado }}</td>
+        <td>{{ invitado.correoInvitado }}</td>
+        <td>{{ invitado.credencialesInvitado }}</td>
+      </tr>
+      
+    </tbody>
+    <br>
+    <button type="volver" (click)="volver()" class="btn btn-primary">Volver</button>
+
+  </table>
+  
+<app-footer></app-footer>
