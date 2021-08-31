@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { AppComponent } from '../../src/app/app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'poli-eventos-frontend'`, () => {
+  it(`should have as title 'PoliEventosFrontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('poli-eventos-frontend');
+    expect(app.title).toEqual('PoliEventosFrontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('poli-eventos-frontend app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('PoliEventosFrontend app is running!');
   });
 });

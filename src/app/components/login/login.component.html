@@ -1,0 +1,19 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <div class="fadeIn first">
+      <img src="assets/POLI.png" id="icon" alt="User Icon" />
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+      <input type="text" id="correoOrganizadorDirectivo" class="fadeIn second" formControlName="correoOrganizadorDirectivo" placeholder="correo">
+      <input type="password" id="contraseñaOrganizadorDirectivo" class="fadeIn third" formControlName="contraseñaOrganizadorDirectivo" placeholder="contraseña">
+      <input type="submit" class="fadeIn fourth" value="Iniciar Sesión">
+    </form>
+
+    <div class = "alert alert-danger" *ngIf="errorStatus">
+      <p>{{ errorMsg }}</p>
+    </div>
+
+  </div>
+</div>

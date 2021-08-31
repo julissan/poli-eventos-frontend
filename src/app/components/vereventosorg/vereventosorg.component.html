@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<h3>Lista de Eventos</h3><br>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha de Inicio</th>
+        <th scope="col">Fecha de Fin</th>
+        <th scope="col">idPrograma</th>
+        <th scope="col">idEscuela</th>
+        <th scope="col">idOrganoInstitucional</th>
+        <th scope="col">idOrganizadorEvento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let evento of eventos" (click)="opcionesEvento(evento.idEvento)">
+        <th scope="row">{{ evento.idEvento }}</th>
+        <td>{{ evento.nombreEvento }}</td>
+        <td>{{ evento.fechaInicio }}</td>
+        <td>{{ evento.fechaFin }}</td>
+        <td>{{ evento.idPrograma }}</td>
+        <td>{{ evento.idEscuela }}</td>
+        <td>{{ evento.idOrganoInstitucional }}</td>
+        <td>{{ evento.idOrganizadorEvento }}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+<app-footer></app-footer>
